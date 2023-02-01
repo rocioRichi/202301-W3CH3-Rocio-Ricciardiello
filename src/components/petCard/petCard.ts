@@ -3,7 +3,6 @@
 
 import { Pet } from '../../models/pet';
 import { Component } from '../component/component';
-import './header.scss';
 
 export class petCard extends Component {
   constructor(public selector: string, public pet: Pet) {
