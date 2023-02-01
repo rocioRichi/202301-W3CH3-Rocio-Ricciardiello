@@ -2,9 +2,12 @@
 import { Footer } from './components/footer/footer';
 import { Header } from './components/header/header';
 import { Menu } from './components/menu/menu';
-import { Tasks } from './components/tasks/tasks';
+import { PETS } from './mocks/pets.mock';
 import './index.scss';
 import { TASK } from './mocks/tasks';
+import { List } from './components/list/list';
+import { Pet } from './models/pet';
+import { petCard } from './components/petCard/petCard';
 
 export type MenuOption = {
   label: string;
@@ -20,5 +23,6 @@ const menuOptions: MenuOption[] = [
 console.log('Load sample');
 new Header('#root');
 new Menu('.header', menuOptions);
-new Tasks('main', TASK);
+new List('main');
+const petList: petCard[] = PETS.map((item) => new petCard('.petul', item));
 new Footer('#root');
